@@ -1,6 +1,7 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 baseUrl = "https://weebneedweed.github.io/ws-iac-from-cfn-to-terra/"
+relativeURLs = true
 
 # For search functionality
 [outputs]
