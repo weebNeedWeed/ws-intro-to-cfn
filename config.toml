@@ -1,22 +1,21 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
-baseUrl = "https://weebneedweed.github.io/ws-iac-from-cfn-to-terra/"
 
 # For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "workshop"
-  # Git hub repo link
-  editURL = ""
-  description = ""
-  author = "journeyoftheaverageguy@gmail.com"
-  showVisitedLinks = true
-  disableBreadcrumb = false
-  disableNextPrev = false
-  
+# Change default color scheme with a variant one. Can be "red", "blue", "green".
+themeVariant = "workshop"
+# Git hub repo link
+editURL = ""
+description = ""
+author = "journeyoftheaverageguy@gmail.com"
+showVisitedLinks = true
+disableBreadcrumb = false
+disableNextPrev = false
+
 [Languages]
 [Languages.en]
 title = "Start with Amazon VPC and AWS VPN Site-to-Site."
