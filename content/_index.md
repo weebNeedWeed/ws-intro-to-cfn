@@ -1,17 +1,17 @@
 ---
-title : "Start with Amazon VPC and AWS VPN Site-to-Site"
+title : "Infrastructure as Code: From CloudFormation to Terraform"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Start with Amazon VPC and AWS VPN Site-to-Site
+# Infrastructure as Code: From CloudFormation to Terraform
 
 #### Overview
 
-In this lab, you will explore the fundamentals of Amazon VPC (Virtual Private Cloud) and AWS VPN (Virtual Private Network) Site-to-Site connections. Gain an understanding of essential concepts and features within Amazon VPC, and practice creating a basic VPC. Additionally, learn how to configure a Site-to-Site VPN to establish a connection between an on-premise environment and an AWS VPC environment.
+In this lab, you will learn the basis of **AWS CloudFormation** and **Terraform**, two tools that enable you to provision AWS resources by defining a file called *template*. In a template, you specify the resources you need, the properties for each resource and the location you want those resources to be deployed. CloudFormation and Terraform will interpret your template and generate your resources automatically.
 
-![VPC](../images/1-Introduce/serviceicon.png?featherlight=false&width=10pc)
+![Overall](/images/overall.png)
 
 #### Content
 
