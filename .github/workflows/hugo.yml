@@ -49,7 +49,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Replace ImageUrl
-        run: "find /path/to/directory -type f -name "_index.md" -exec sed -i 's/\/images\//\/ws-iac-from-cfn-to-terra\/images\//g' {} +"
+        run: find /path/to/directory -type f -name "_index.md" -exec sed -i 's/\/images\//\/ws-iac-from-cfn-to-terra\/images\//g' {} +
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
