@@ -8,7 +8,7 @@ pre : " <b> 2. </b> "
 
 #### Overview
 
-In order to reinforce the understanding of the material covered in this lab, you will set up a Cloud9 environment, a managed IDE that helps you work right on your browser. 
+In order to reinforce the understanding of the material covered in this lab, you will set up a Cloud9 instance, a managed IDE that lets you work directly in your browser, and put your newly learned IaC skills into practice.
 
 This section will guide you creating a Cloud9 environment through some simple steps. In that environment, you will be able to access necessary tools for fulfilling this lab such as AWSCLI, python, etc...
 
