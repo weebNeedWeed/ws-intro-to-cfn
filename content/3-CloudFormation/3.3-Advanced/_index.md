@@ -1,5 +1,5 @@
 ---
-title : "Create Internet Gateway"
+title : "Advanced"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
