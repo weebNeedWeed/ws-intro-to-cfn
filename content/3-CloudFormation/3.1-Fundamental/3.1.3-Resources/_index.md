@@ -24,18 +24,18 @@ Moreover, in the **Metadata** section, we can improve the user experience(UX) of
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
-      - Label: LabelOfParameterGroup1
+      - Label:
+          default: 'Amazon EC2 Configuration'
         Parameters:
-          - Param1
-          - Param2
+          - InstanceType
     ParameterLabels:
-      Param1:
-        default: Param1Label
-      Param2:
-        default: Param2Label
+      InstanceType:
+        default: 'Type of EC2 Instance'
 ```
 
-The illustration above gives you one group with two parameters. When viewing the template on the AWS console, you will see that two parameters are in the group that has the label *LabelOfParameterGroup1* and they are both designated as *ParamXLabel*. 
+The illustration above gives you a group with one parameter. When viewing the template on the AWS console, you will see that the *InstanceType* parameter is located in *ParameterGroups* group and has label designated as *Type of EC2 Instance*.
+
+![8](/images/3.1.3-Resources/8.png)
 
 #### Parameters
 
@@ -53,5 +53,126 @@ Parameters:
     Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
 ```
 
-As you can see, we have the *InstanceType* parameter which accepts a string value and is constrained by three values: t2.micro, m1.small and m1.large. You can pass in this parameter to build appropriate instance when creating or updating your stack.
+As you can see, we have the *InstanceType* parameter which accepts a string and is constrained by three values: t2.micro, m1.small and m1.large. You can pass in this parameter to build appropriate instance when creating or updating your stack.
 
+AWS CloudFormation provides you with several parameter types.
+
+| Name                         | Description                                                                           | Example                                           |
+| ---------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| String                       | A literal string.                                                                     | "MyInstance","t2.micro"                           |
+| Number                       | An integer or float.                                                                  | "123"                                             |
+| List<Number>                 | An array of integers or floats.                                                       | "10,20,30"                                        |
+| CommaDelimitedList           | An array of literal strings.                                                          | "test,dev,prod"                                   |
+| AWS-specific parameter types | AWS values such as Amazon VPC IDs.                                                    | AWS::EC2::Image::Id                               |
+| SSM parameter types          | Parameters that correspond to existing parameters in Systems Manager Parameter Store. | AWS::SSM::Parameter::Value\<AWS::EC2::Image::Id\> |
+
+**You can read more at: [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#aws-ssm-parameter-types)**.
+
+#### Resources
+
+The required **Resources** section declares the AWS resources that you want to include in the stack, such as an Amazon EC2 instance or an Amazon S3 bucket.
+
+Let's see how we can define an EC2 instance with a few lines of code.
+
+```yaml
+Resources:
+  WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0ff8a91507f77f867
+```
+
+The latest ImageId some OSes is changed over time. Later on in this workshop, you will learn how to get the latest ImageId via the AWS Console.
+
+#### Reinforce your understanding
+
+1\. Open Cloud9 instance then find **~/environment/ws2-material/workshop/fundamental/resources.yml**.
+
+2\. Copy the Metadata and paste into the template file.
+
+```yaml
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Amazon EC2 Configuration'
+        Parameters:
+          - InstanceType
+    ParameterLabels:
+      InstanceType:
+        default: 'Type of EC2 Instance'
+```
+![1](/images/3.1.3-Resources/1.png)
+
+3\. Copy the Parameters and paste into your template.
+
+```yaml
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - m1.small
+      - m1.large
+    Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
+```
+
+![2](/images/3.1.3-Resources/2.png)
+
+4\. Copy and paste the Resources.
+
+```yaml
+Resources:
+  WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: <replace with your ami>
+```
+
+You will notice that the InstanceType we replace with "!Ref InstanceType". **!Ref** is a way that you **reference parameters** in your resources, you will learn !Ref and other **Intrinsic Functions** in the next chapter. In this case, you reference the InstanceType parameter in your EC2 configuration.
+
+5\. Open the AWS Console, go to EC2.
+
+![3](/images/3.1.3-Resources/3.png)
+
+Click on **AMI Catalog** then copy the ImageId of the latest Amazon Linux.
+
+![4](/images/3.1.3-Resources/4.png)
+
+6\. Paste the ImageId you have copied into your template, you will get:
+
+![5](/images/3.1.3-Resources/5.png)
+
+7\. Run the command to create your stack.
+
+```bash
+cd ~/environment/ws2-material/workshop/fundamental
+aws cloudformation create-stack --stack-name resources --template-body file://resources.yml
+```
+
+8\. Wait for the stack is successfully created, open EC2 and check your instance.
+
+You will notice that the instance type take the value of *t2.micro*, which is also the default value of our parameter as we don't specify any value when creating the stack.
+
+![6](/images/3.1.3-Resources/6.png)
+
+9\. Run the update command to change the instance type to **m1.small**.
+
+```bash
+aws cloudformation update-stack --stack-name resources --template-body file://resources.yml --parameters ParameterKey=InstanceType,ParameterValue=m1.small
+```
+
+You will see that the instance type is changed.
+
+![7](/images/3.1.3-Resources/7.png)
+
+#### Cleaning up
+
+**Run the delete command to delete your stack:**
+
+```bash
+aws cloudformation delete-stack --stack-name resources
+```
