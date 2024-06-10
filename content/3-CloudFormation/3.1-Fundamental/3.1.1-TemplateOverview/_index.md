@@ -42,4 +42,4 @@ CloudFormation will create, update and delete a stack in its entirety. When any 
 
 #### Further readings
 
- - [Template anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
+* **[Template anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)**.

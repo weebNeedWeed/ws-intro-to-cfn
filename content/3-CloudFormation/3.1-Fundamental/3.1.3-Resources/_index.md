@@ -33,7 +33,7 @@ Metadata:
         default: 'Type of EC2 Instance'
 ```
 
-The illustration above gives you a group with one parameter. When viewing the template on the AWS console, you will see that the *InstanceType* parameter is located in *ParameterGroups* group and has label designated as *Type of EC2 Instance*.
+The illustration above gives you a group with one parameter. When viewing the template in the AWS Console, you will see that the *InstanceType* parameter is located in the *ParameterGroups* group and has a label designated as *Type of EC2 Instance*.
 
 ![8](/images/3.1.3-Resources/8.png)
 
@@ -53,7 +53,7 @@ Parameters:
     Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
 ```
 
-As you can see, we have the *InstanceType* parameter which accepts a string and is constrained by three values: t2.micro, m1.small and m1.large. You can pass in this parameter to build appropriate instance when creating or updating your stack.
+In that example, the *InstanceType* parameter accepts a string and is limited to three values: t2.micro, m1.small, and m1.large. You can use this parameter to build customized instances when creating or updating your stack.
 
 AWS CloudFormation provides you with several parameter types.
 
@@ -83,7 +83,7 @@ Resources:
       ImageId: ami-0ff8a91507f77f867
 ```
 
-The latest ImageId some OSes is changed over time. Later on in this workshop, you will learn how to get the latest ImageId via the AWS Console.
+The latest ImageId(or AMI) of some OSes is changed over time. Later on in this workshop, you will learn how to get the latest ImageId via the AWS Console.
 
 #### Reinforce your understanding
 
@@ -132,7 +132,8 @@ Resources:
       ImageId: <replace with your ami>
 ```
 
-You will notice that the InstanceType we replace with "!Ref InstanceType". **!Ref** is a way that you **reference parameters** in your resources, you will learn !Ref and other **Intrinsic Functions** in the next chapter. In this case, you reference the InstanceType parameter in your EC2 configuration.
+You will notice that we use **!Ref InstanceType** to fill out the the property *InstanceType*. The **!Ref** function allows you to reference parameters in your resources. In this case, we reference the *InstanceType* parameter we have defined early in this workshop.
+You will learn about **!Ref** and other **Intrinsic Functions** in the next chapter. 
 
 5\. Open the AWS Console, go to EC2.
 
@@ -155,7 +156,7 @@ aws cloudformation create-stack --stack-name resources --template-body file://re
 
 8\. Wait for the stack is successfully created, open EC2 and check your instance.
 
-You will notice that the instance type take the value of *t2.micro*, which is also the default value of our parameter as we don't specify any value when creating the stack.
+The instance type will be set to *t2.micro*, the default value of our parameter, since we don't specify any value when creating the stack.
 
 ![6](/images/3.1.3-Resources/6.png)
 
@@ -176,3 +177,7 @@ You will see that the instance type is changed.
 ```bash
 aws cloudformation delete-stack --stack-name resources
 ```
+
+#### Further readings
+
+* **[Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#aws-ssm-parameter-types)**.

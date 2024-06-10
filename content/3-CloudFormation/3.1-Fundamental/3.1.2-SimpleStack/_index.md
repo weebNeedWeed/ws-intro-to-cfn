@@ -88,3 +88,7 @@ aws cloudformation update-stack --stack-name simple-stack --template-body file:/
 ```bash
 aws cloudformation delete-stack --stack-name simple-stack
 ```
+
+#### Further readings
+
+* **[Getting started with AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.html)**.
