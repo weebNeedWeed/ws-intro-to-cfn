@@ -8,7 +8,7 @@ pre : " <b> 3.1.2 </b> "
 
 #### Creating a stack
 
-In this section, you will get yourself familiarized with CloudFormation by creating a template file in which you define a simple S3 bucket. After that, you will run the AWS CLI **create-stack** command to build a stack according to your template. Additionally, you will learn how to update your stack using the **update-stack** command.
+In this chapter, you will get yourself familiarized with CloudFormation by creating a template file in which you define a simple S3 bucket. After that, you will run the AWS CLI **create-stack** command to build a stack according to your template. Additionally, you will learn how to update your stack using the **update-stack** command.
 
 1\. Open Cloud9 then find **~/environment/ws2-material/workshop/fundamental/simple-stack.yml**.
 

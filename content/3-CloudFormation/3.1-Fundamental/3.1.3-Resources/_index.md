@@ -132,8 +132,8 @@ Resources:
       ImageId: <replace with your ami>
 ```
 
-You will notice that we use **!Ref InstanceType** to fill out the the property *InstanceType*. The **!Ref** function allows you to reference parameters in your resources. In this case, we reference the *InstanceType* parameter we have defined early in this workshop.
-You will learn about **!Ref** and other **Intrinsic Functions** in the next chapter. 
+You will notice that we use **!Ref InstanceType** to fill out the the property *InstanceType*. The **Ref** function allows you to reference parameters in your resources. In this case, we reference the *InstanceType* parameter we have defined early in this workshop.
+You will learn about **Ref** and other **Intrinsic Functions** in the next chapter. 
 
 5\. Open the AWS Console, go to EC2.
 
