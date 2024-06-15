@@ -33,7 +33,7 @@ Metadata:
         default: 'Type of EC2 Instance'
 ```
 
-The illustration above gives you a group with one parameter. When viewing the template in the AWS Console, you will see that the *InstanceType* parameter is located in the *ParameterGroups* group and has a label designated as *Type of EC2 Instance*.
+The illustration above gives you a group with one parameter. When viewing the template on the AWS Console, you will see that the *InstanceType* parameter is located in the *ParameterGroups* group and has a label designated as *Type of EC2 Instance*.
 
 ![8](/images/3.1.3-Resources/8.png)
 
@@ -87,7 +87,7 @@ The latest ImageId(or AMI) of some OSes is changed over time. Later on in this w
 
 #### Reinforce your understanding
 
-1\. Open Cloud9 instance then find **~/environment/ws2-material/workshop/fundamental/resources.yml**.
+1\. Open Cloud9 then find **~/environment/ws2-material/workshop/fundamental/resources.yml**.
 
 2\. Copy the Metadata and paste into the template file.
 
