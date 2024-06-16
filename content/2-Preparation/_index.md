@@ -12,6 +12,10 @@ In order to reinforce the understanding of the material covered in this lab, you
 
 This section will guide you creating a Cloud9 environment through some simple steps. In that environment, you will be able to access necessary tools for fulfilling this lab such as AWSCLI, python, etc...
 
+#### A quick review of YAML
+
+AWS CloudFormation use YAML and JSON as the configuration language. In this workshop, you will mainly use YAML to write the templates, so please make sure that you take a cursory look at the **[YAML Cheat Sheet](https://quickref.me/yaml.html)**.
+
 #### Creating an environment
 
 1. Log in to the console, search for ```Cloud9```.
