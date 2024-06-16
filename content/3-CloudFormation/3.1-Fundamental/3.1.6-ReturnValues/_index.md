@@ -18,11 +18,10 @@ The **Fn::GetAtt** intrinsic function simply returns the value of an attribute f
 !GetAtt LogicalResourceName.AttributeName
 ```
 
-For instance:
+For instance, we can get the dns name of a bucket with Fn::GetAtt:
 
 ```yaml
-!GetAtt WebServerInstance.PublicIp
-!GetAtt WebServerInstance.PublicDnsName
+!GetAtt S3Bucket.DomainName
 ```
 
 #### Ref
