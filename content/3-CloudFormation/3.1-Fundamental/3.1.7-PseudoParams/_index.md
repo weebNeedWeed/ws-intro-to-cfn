@@ -18,7 +18,7 @@ In AWS, we have several pseudo parameters, such as:
 
 * **AWS::Partition**: Returns the partition that the resource is in. For standard AWS Regions, the partition is *aws*; for the China (Beijing and Ningxia) region is *aws-cn*, and for the AWS GovCloud (US-West) region is *aws-us-gov*.
 
-And we will use the **Ref** function when working with those parameters. For instance, **```!Ref AWS::AccountId```** and **```!Ref AWS::Region```**.
+And we will use the **Ref** function when working with those parameters. For instance, **```!Ref AWS::AccountId```** and **```!Ref AWS::Region```** return the AccountId and the region name of the stack off of your template.
 
 #### Examining the illustration
 
