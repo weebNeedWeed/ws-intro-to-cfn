@@ -22,7 +22,7 @@ And we will use the **Ref** function when working with those parameters. For ins
 
 #### Examining the illustration
 
-In the following example, we will create an **[AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)**, which is a storage of configuration data for our resources, such as database connection strings, secret key, etc. Then we build a Lambda function that reads the parameter in the store and output it when executed.
+In the following example, we will create a parameter in the **[AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)**, which is a storage of configuration data for our resources, such as database connection strings, secret key, etc. Then we build a Lambda function that reads the parameter in the store and output it when executed.
 
 The first thing we need to do is to define a CloudFormation parameter which is used as the value of our parameter in the Parameter Store.
 
