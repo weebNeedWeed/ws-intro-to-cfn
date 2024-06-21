@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.1.4 </b> "
 ---
 
-#### Overview
+#### What is Intrinsic Function ?
 
 AWS CloudFormation provides you with some built-in functions called **Intrinsic Function** that help you manage your stack, values returned by calling those functions are not available until runtime. Without Intrinsic Function, you are limited to very basic templates, like the one in the **[3.1.2](/3-CloudFormation/3.1-Fundamental/3.1.2-SimpleStack)** chapter.
 
