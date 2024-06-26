@@ -3,12 +3,12 @@ title : "Intrinsic functions"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 3.1.4 </b> "
+pre : " <b> 3.4 </b> "
 ---
 
 #### What is Intrinsic Function ?
 
-AWS CloudFormation provides you with some built-in functions called **Intrinsic Function** that help you manage your stack, values returned by calling those functions are not available until runtime. Without Intrinsic Function, you are limited to very basic templates, like the one in the **[3.1.2](/3-CloudFormation/3.1-Fundamental/3.1.2-SimpleStack)** chapter.
+AWS CloudFormation provides you with some built-in functions called **Intrinsic Function** that help you manage your stack, values returned by calling those functions are not available until runtime. Without Intrinsic Function, you are limited to very basic templates, like the one in the **[3.2](/3-CloudFormation/3.1-Fundamental/3.1.2-SimpleStack)** chapter.
 
 #### Ref
 
@@ -107,7 +107,7 @@ ImageId:
   Description: 'The ID of the Image.'
 ```
 
-![Illustration](/images/3.1.4-IntrinsicFunctions/1.png)
+![Illustration](/images/3.4-IntrinsicFunctions/1.png)
 
 3\. Replace the ImageId property.
 
@@ -121,7 +121,7 @@ Resources:
       ImageId: !Ref ImageId
 ```
 
-![Illustration](/images/3.1.4-IntrinsicFunctions/2.png)
+![Illustration](/images/3.4-IntrinsicFunctions/2.png)
 
 4\. Add the Tags property to your instance.
 
@@ -139,7 +139,7 @@ Resources:
           Value: !Sub ${InstanceType}
 ```
 
-![Illustration](/images/3.1.4-IntrinsicFunctions/3.png)
+![Illustration](/images/3.4-IntrinsicFunctions/3.png)
 
 5\. Run the **create-stack** command to create a new stack.
 
@@ -148,13 +148,13 @@ cd ~/environment/ws2-material/workshop/fundamental
 aws cloudformation create-stack --stack-name intrinsic-functions --template-body file://intrinsic-functions.yml --parameters ParameterKey=ImageId,ParameterValue="Replace with your ImageId"
 ```
 
-![Illustration](/images/3.1.4-IntrinsicFunctions/4.png)
+![Illustration](/images/3.4-IntrinsicFunctions/4.png)
 
 6\. Review the EC2 instance to confirm that it is created properly.
 
 If there is no failure during the stack creation, you will obtain an EC2 instance like the instance in the image below.
 
-![Illustration](/images/3.1.4-IntrinsicFunctions/5.png)
+![Illustration](/images/3.4-IntrinsicFunctions/5.png)
 
 #### Cleaning up
 

@@ -3,7 +3,7 @@ title : "Template overview"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 3.1.1 </b> "
+pre : " <b> 3.1 </b> "
 ---
 
 #### What is the CloudFormation template ?
@@ -38,7 +38,7 @@ A stack is representation of collections of AWS resources that you can manage as
 
 CloudFormation will create, update and delete a stack in its entirety. When any failure in the stack creation or stack update, CloudFormation will roll it back to the previous state, keeping it always in a consistent state and reducing the risk of manual error. 
 
-![Stack architecture](/images/3.1.1-Overview/cfn-stack.png)
+![Stack architecture](/images/3.1-Overview/cfn-stack.png)
 
 #### Further readings
 

@@ -3,7 +3,7 @@ title : "Pseudo parameters"
 date : "`r Sys.Date()`"
 weight : 7
 chapter : false
-pre : " <b> 3.1.7 </b> "
+pre : " <b> 3.7 </b> "
 ---
 
 #### What is Pseudo Parameter ?
@@ -116,7 +116,7 @@ Parameters:
     Description: Value to be used with the dbUsername SSM parameter.
 ```
 
-![Illustration](/images/3.1.7-PseudoParams/1.png)
+![Illustration](/images/3.7-PseudoParams/1.png)
 
 3\. Add the system manager parameter **BasicParameter**.
 
@@ -131,7 +131,7 @@ Resources:
       Description: SSM Parameter for database username.
 ```
 
-![Illustration](/images/3.1.7-PseudoParams/2.png)
+![Illustration](/images/3.7-PseudoParams/2.png)
 
 4\. Add the IAM role.
 
@@ -159,7 +159,7 @@ Resources:
                 Resource: !Sub 'arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${BasicParameter}'
 ```
 
-![Illustration](/images/3.1.7-PseudoParams/3.png)
+![Illustration](/images/3.7-PseudoParams/3.png)
 
 5\. Add the Lambda function.
 
@@ -180,7 +180,7 @@ Resources:
               print(f'SSM dbUsername parameter value: {response["Parameter"]["Value"]}')
 ```
 
-![Illustration](/images/3.1.7-PseudoParams/4.png)
+![Illustration](/images/3.7-PseudoParams/4.png)
 
 6\. Run the command to create a new stack.
 
@@ -195,19 +195,19 @@ The argument **--capabilities CAPABILITY_NAMED_IAM** allows CloudFormation to cr
 
 7\. Once stack created successfully, navigate to the Lambda function.
 
-![Illustration](/images/3.1.7-PseudoParams/5.png)
+![Illustration](/images/3.7-PseudoParams/5.png)
 
 8\. To trigger the function, scroll down and click on **Test**.
 
-![Illustration](/images/3.1.7-PseudoParams/6.png)
+![Illustration](/images/3.7-PseudoParams/6.png)
 
 9\. Enter `my-event-name` for **Event name**, then click on **Invoke**.
 
-![Illustration](/images/3.1.7-PseudoParams/7.png)
+![Illustration](/images/3.7-PseudoParams/7.png)
 
 10\. Validate the data logged by function.
 
-![Illustration](/images/3.1.7-PseudoParams/8.png)
+![Illustration](/images/3.7-PseudoParams/8.png)
 
 #### Cleaning up
 

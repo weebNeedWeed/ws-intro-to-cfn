@@ -18,7 +18,7 @@ disableNextPrev = false
 
 [Languages]
 [Languages.en]
-title = "Infrastructure as Code: From CloudFormation to Terraform"
+title = "Infrastructure as Code: Introduction to CloudFormation"
 weight = 1
 languageName = "English"
 

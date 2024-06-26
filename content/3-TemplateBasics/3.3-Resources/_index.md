@@ -3,7 +3,7 @@ title : "Metadata, Parameters and Resources"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
-pre : " <b> 3.1.3 </b> "
+pre : " <b> 3.3 </b> "
 ---
 
 #### Metadata
@@ -35,7 +35,7 @@ Metadata:
 
 The illustration above gives you a group with one parameter. When viewing the template on the AWS Console, you will see that the *InstanceType* parameter is located in the *ParameterGroups* group and has a label designated as *Type of EC2 Instance*.
 
-![8](/images/3.1.3-Resources/8.png)
+![8](/images/3.3-Resources/8.png)
 
 #### Parameters
 
@@ -103,7 +103,7 @@ Metadata:
       InstanceType:
         default: 'Type of EC2 Instance'
 ```
-![1](/images/3.1.3-Resources/1.png)
+![1](/images/3.3-Resources/1.png)
 
 3\. Copy the Parameters and paste into your template.
 
@@ -119,7 +119,7 @@ Parameters:
     Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
 ```
 
-![2](/images/3.1.3-Resources/2.png)
+![2](/images/3.3-Resources/2.png)
 
 4\. Copy and paste the Resources.
 
@@ -137,15 +137,15 @@ You will learn about **Ref** and other **Intrinsic Functions** in the next chapt
 
 5\. Open the AWS Console, go to EC2.
 
-![3](/images/3.1.3-Resources/3.png)
+![3](/images/3.3-Resources/3.png)
 
 Click on **AMI Catalog** then copy the ImageId of the latest Amazon Linux.
 
-![4](/images/3.1.3-Resources/4.png)
+![4](/images/3.3-Resources/4.png)
 
 6\. Paste the ImageId you have copied into your template, you will get:
 
-![5](/images/3.1.3-Resources/5.png)
+![5](/images/3.3-Resources/5.png)
 
 7\. Run the command to create your stack.
 
@@ -158,7 +158,7 @@ aws cloudformation create-stack --stack-name resources --template-body file://re
 
 The instance type will be set to *t2.micro*, the default value of our parameter, since we don't specify any value when creating the stack.
 
-![6](/images/3.1.3-Resources/6.png)
+![6](/images/3.3-Resources/6.png)
 
 9\. Run the update command to change the instance type to **m1.small**.
 
@@ -168,7 +168,7 @@ aws cloudformation update-stack --stack-name resources --template-body file://re
 
 You will see that the instance type is changed.
 
-![7](/images/3.1.3-Resources/7.png)
+![7](/images/3.3-Resources/7.png)
 
 #### Cleaning up
 

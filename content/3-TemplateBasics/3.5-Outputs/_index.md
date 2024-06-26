@@ -3,7 +3,7 @@ title : "Outputs"
 date : "`r Sys.Date()`"
 weight : 5
 chapter : false
-pre : " <b> 3.1.5 </b> "
+pre : " <b> 3.5 </b> "
 ---
 
 #### What is the Outputs section ?
@@ -42,7 +42,7 @@ Outputs:
     Value: !GetAtt WebServerInstance.PublicDnsName
 ```
 
-![Illustration](/images/3.1.5-Outputs/1.png)
+![Illustration](/images/3.5-Outputs/1.png)
 
 3\. Run the command to create a new stack.
 
@@ -53,7 +53,7 @@ aws cloudformation create-stack --stack-name outputs --template-body file://outp
 
 4\. Open CloudFormation and validate the outputs of your stack once it is created.
 
-![Illustration](/images/3.1.5-Outputs/2.png)
+![Illustration](/images/3.5-Outputs/2.png)
 
 #### Cleaning up
 

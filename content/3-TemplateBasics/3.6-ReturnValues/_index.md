@@ -3,7 +3,7 @@ title : "Obtaining resources' return values"
 date : "`r Sys.Date()`"
 weight : 6
 chapter : false
-pre : " <b> 3.1.6 </b> "
+pre : " <b> 3.6 </b> "
 ---
 
 #### Overview
@@ -36,19 +36,19 @@ Suppose we need to find return values of an EC2 instance, we should follow those
 
 2\. Scroll down and expand **Template reference**, then expand **Resource and property reference**.
 
-![Illustration](/images/3.1.6-ReturnValues/1.png)
+![Illustration](/images/3.6-ReturnValues/1.png)
 
 3\. Open the browser search then find `Amazon EC2`.
 
-![Illustration](/images/3.1.6-ReturnValues/2.png)
+![Illustration](/images/3.6-ReturnValues/2.png)
 
 4\. Click on **Amazon EC2** then find and click on **AWS::EC2::Instance**.
 
-![Illustration](/images/3.1.6-ReturnValues/3.png)
+![Illustration](/images/3.6-ReturnValues/3.png)
 
 5\. Click on **Return values**. You will see all return values EC2 provides.
 
-![Illustration](/images/3.1.6-ReturnValues/4.png)
+![Illustration](/images/3.6-ReturnValues/4.png)
 
 #### Solidify your knowledge
 
@@ -67,7 +67,7 @@ Outputs:
     Value: !GetAtt S3Bucket.DomainName
 ```
 
-![Illustration](/images/3.1.6-ReturnValues/5.png)
+![Illustration](/images/3.6-ReturnValues/5.png)
 
 3\. Run the command to initialize the stack.
 
@@ -78,9 +78,9 @@ aws cloudformation create-stack --stack-name return-values --template-body file:
 
 4\. Validate the stack is created properly.
 
-![Illustration](/images/3.1.6-ReturnValues/6.png)
+![Illustration](/images/3.6-ReturnValues/6.png)
 
-![Illustration](/images/3.1.6-ReturnValues/7.png)
+![Illustration](/images/3.6-ReturnValues/7.png)
 
 #### Cleaning up
 

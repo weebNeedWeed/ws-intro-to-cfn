@@ -3,7 +3,7 @@ title : "Creating a simple stack"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> 3.1.2 </b> "
+pre : " <b> 3.2 </b> "
 ---
 
 #### Creating a stack
@@ -31,7 +31,7 @@ You can read more about the S3 bucket here: **[AWS::S3::Bucket](https://docs.aws
 
 3\. Upon pasting, you will obtain:
    
-![1](/images/3.1.2-SimpleStack/1.png)
+![1](/images/3.2-SimpleStack/1.png)
 
 4\. Open terminal and execute the command below to create the stack.
    
@@ -42,17 +42,17 @@ aws cloudformation create-stack --stack-name simple-stack --template-body file:/
 
 * Once created, you will get the JSON code including **StackId** which indicates your stack's Id.
 
-![2](/images/3.1.2-SimpleStack/2.png)
+![2](/images/3.2-SimpleStack/2.png)
 
 5\. Open console and check your stack and your bucket has been created properly.
    
-![4](/images/3.1.2-SimpleStack/4.png)
+![4](/images/3.2-SimpleStack/4.png)
 
-![3](/images/3.1.2-SimpleStack/3.png)
+![3](/images/3.2-SimpleStack/3.png)
 
 6\. The bucket we created does not enable the **Bucket Versioning** feature. In this step we need to update our template to enable it.
 
-![5](/images/3.1.2-SimpleStack/5.png)
+![5](/images/3.2-SimpleStack/5.png)
 
 * Replace your S3Bucket with this code:
 
@@ -69,7 +69,7 @@ Resources:
               SSEAlgorithm: AES256
 ```
 
-![6](/images/3.1.2-SimpleStack/6.png)
+![6](/images/3.2-SimpleStack/6.png)
 
 7\. Execute the command to update your stack.
    
@@ -79,7 +79,7 @@ aws cloudformation update-stack --stack-name simple-stack --template-body file:/
 
 * Bucket Versioning has been enabled:
 
-![7](/images/3.1.2-SimpleStack/7.png)
+![7](/images/3.2-SimpleStack/7.png)
 
 #### Cleaning up
 

@@ -1,5 +1,5 @@
 ---
-title : "CloudFormation"
+title : "Template basics"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
