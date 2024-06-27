@@ -81,7 +81,7 @@ aws s3 mb s3://<your-unique-bucket-name>
 
 ![Illustration](/images/3.10-Testing/3.png)
 
-4\. Open the **.taskcat.yml** and that snippet to it.
+4\. Open the **.taskcat.yml** and that snippet to it. Replace **\<Your-bucket-name\>** with your bucket you have created in the last step.
 
 ```yaml
 project:
