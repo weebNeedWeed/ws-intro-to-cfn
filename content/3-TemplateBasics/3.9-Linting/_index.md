@@ -51,7 +51,7 @@ This will show you two errors, the first one says that your template contains a 
 
 ![Illustration](/images/3.9-Linting/3.png)
 
-To fix that, we will simply turn **SecurityGroupIngress** into a separated resource, then add a reference to **SecurityGroup**.
+To fix that, we will simply turn **SecurityGroupIngress** into a separate resource, then add a reference to **SecurityGroup**.
 
 ```yaml
   SecurityGroup:

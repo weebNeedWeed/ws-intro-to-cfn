@@ -99,8 +99,6 @@ Finally, we declare a lambda function and attach the role to it. Our function us
               print(f'SSM dbUsername parameter value: {response["Parameter"]["Value"]}')
 ```
 
-___
-
 #### Reinforce your understanding
 
 1\. Open Cloud9 then find **~/environment/ws2-material/workshop/fundamental/pseudo-parameters.yml**.
