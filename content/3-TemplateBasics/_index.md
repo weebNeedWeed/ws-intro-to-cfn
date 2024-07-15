@@ -6,15 +6,19 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-#### CloudFormation
+#### Overview
 
-In this section, you will walk through the basics of CloudFormation, including what makes up a template and how to utilize them. In addition, you will also learn the intermediate and advanced concepts of CloudFormation, which help you handle complex use cases.
+This section is for the basic concepts we usually use in the CloudFormation template, including:
 
-![CfnLogo](/images/3-CloudFormation/CfnLogo.png?width=15pc)
-
-#### In the CloudFormation section, we have three levels, including:
-
-1. [Fundamental](3.1-Fundamental/)
-2. [Intermediate](3.2-Intermediate/)
-3. [Advanced](3.3-Advanced/)
+1. [Template overview](3.3-Resources/)
+2. [Creating a simple stack](3.2-SimpleStack/)
+3. [Metadata, Parameters and Resources](3.3-Resources/)
+4. [Intrinsic functions](3.4-IntrinsicFunctions/)
+5. [Outputs](3.5-Outputs/)
+6. [Obtaining resources' return values](3.6-ReturnValues/)
+7. [Pseudo parameters](3.7-PseudoParams/)
+8. [Mappings](3.8-Mappings/)
+9. [Linting](3.9-Linting/)
+10. [Testing your template](3.10-Testing/)
+11. [Flipping format and cleanup](3.11-FlippingAndCleanup/)
 

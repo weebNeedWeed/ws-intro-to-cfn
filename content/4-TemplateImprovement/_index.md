@@ -12,3 +12,7 @@ In the **[Template Basics](/3-TemplateBasics)** section, you have walked through
 
 #### Content
 
+1. [Latest AMI across all regions](4.1-LatestAmi/)
+2. [Session Manager](4.2-SessionManager/)
+3. [Helper Scripts](4.3-HelperScripts/)
+4. [Custom Resource](4.4-CustomResource/)

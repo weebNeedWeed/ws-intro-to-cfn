@@ -15,9 +15,8 @@ In this lab, you will learn the basis of **AWS CloudFormation**, the tool that e
 
 #### Content
 
-1. [Introduction to VPC](1-introduce/)
-2. [Firewall within VPC](2-firewallinvpc/)
-3. [Preparation Steps](3-prerequiste/)
-4. [Creating an EC2 Server](4-createec2server/)
-5. [Configuration of Site-to-Site VPN](5-vpnsitetosite/)
-6. [Resource Cleanup](6-cleanup/)
+1. [Introduction](1-introduce/)
+2. [Preparation](2-firewallinvpc/)
+3. [Template Basics](3-TemplateBasics)
+4. [Template Improvement](4-TemplateImprovement)
+5. [Conclusion](5-Conclusion)
