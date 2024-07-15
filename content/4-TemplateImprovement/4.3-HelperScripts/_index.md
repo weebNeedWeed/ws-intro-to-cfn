@@ -254,3 +254,4 @@ aws cloudformation delete-stack --stack-name helper-scripts
 
 * **[CreationPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html)**.
 * **[Helper Scripts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts-reference.html)**.
+* **[AWS::CloudFormation::Init Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html)**.
