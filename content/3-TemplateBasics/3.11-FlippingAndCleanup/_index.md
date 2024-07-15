@@ -39,7 +39,7 @@ cd ~/environment/ws2-material/workshop/fundamental/flipping-and-cleanup/flipping
 cfn-flip flipping.json flipping.yaml
 ```
 
-3. Open the file **flipping.yaml** to see the result.
+3\. Open the file **flipping.yaml** to see the result.
 
 ![Illustration](/images/3.11-FlippingAndCleanup/2.png)
 
